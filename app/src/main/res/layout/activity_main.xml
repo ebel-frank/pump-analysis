@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingStart="13dp"
+        android:paddingTop="15dp"
+        android:paddingEnd="13dp"
+        android:scrollbars="none">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <View
+                android:layout_width="150dp"
+                android:layout_height="10dp"
+                android:layout_gravity="center_horizontal"
+                android:forceDarkAllowed="false"
+                android:background="@color/tankBorder"/>
+            <me.itangqi.waveloadingview.WaveLoadingView
+                android:id="@+id/waveLoadingView"
+                android:layout_width="wrap_content"
+                android:layout_height="400dp"
+                android:layout_marginBottom="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginStart="15dp"
+                android:layout_gravity="center"
+                android:forceDarkAllowed="false"
+                app:wlv_borderColor="@color/tankBorder"
+                app:wlv_borderWidth="4dp"
+                app:wlv_shapeType="square"
+                app:wlv_round_rectangle="false"
+                app:wlv_triangle_direction="north"
+                app:wlv_titleCenterStrokeColor="@color/waterColor"
+                app:wlv_titleCenterStrokeWidth="3dp"
+                app:wlv_titleCenter="50%"
+                app:wlv_titleCenterColor="@android:color/white"
+                app:wlv_titleCenterSize="35sp"
+                app:wlv_waveAmplitude="18"
+                app:wlv_waveColor="@color/waterColor"/>
+
+            <RelativeLayout
+                android:id="@+id/statusLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="15dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/status_bg">
+                <TextView
+                    android:id="@+id/waterLevel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:text="Water level:"/>
+                <TextView
+                    android:id="@+id/level"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/statusText"
+                    android:layout_toEndOf="@id/waterLevel"
+                    android:layout_alignBottom="@id/waterLevel"
+                    android:text="50%"/>
+
+                <TextView
+                    android:id="@+id/pumpStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/waterLevel"
+                    android:textSize="18sp"
+                    android:text="Pump status:"/>
+                <TextView
+                    android:id="@+id/status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/statusText"
+                    android:layout_toEndOf="@id/pumpStatus"
+                    android:layout_alignBottom="@id/pumpStatus"
+                    android:text="OFF"/>
+
+                <TextView
+                    android:id="@+id/tankHeight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/pumpStatus"
+                    android:textSize="18sp"
+                    android:text="Tank height:"/>
+                <TextView
+                    android:id="@+id/height"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/statusText"
+                    android:layout_toEndOf="@id/tankHeight"
+                    android:layout_alignBottom="@id/tankHeight"
+                    android:text="100cm"/>
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/history"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="History"
+                android:textSize="15sp" />
+
+            <com.github.mikephil.charting.charts.LineChart
+                android:id="@+id/chart1"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"/>
+        </LinearLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/blurBG"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:clickable="false"
+        android:background="#8CD3D3D3">
+
+        <ProgressBar
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:indeterminateTint="@color/tankBorder"
+            android:layout_centerInParent="true"/>
+    </RelativeLayout>
+
+</RelativeLayout>

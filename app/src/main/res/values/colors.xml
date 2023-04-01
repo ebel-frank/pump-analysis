@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">@color/waterColor</color>
+    <color name="colorPrimaryDark">@color/waterColor</color>
+    <color name="colorAccent">@color/waterColor</color>
+
+    <color name="waterColor">#00bbfb</color>
+    <color name="colorIncrease">#00FF00</color>
+    <color name="colorDecrease">#FF0000</color>
+    <color name="lineColor">#DBD9D9</color>
+    <color name="tankBorder">#017cbd</color>
+</resources>

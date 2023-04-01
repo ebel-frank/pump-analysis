@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "464827454067",
+    "project_id": "pump-project-feda3",
+    "storage_bucket": "pump-project-feda3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:464827454067:android:381cfbc08b256b33225006",
+        "android_client_info": {
+          "package_name": "com.ebel_frank.pumpanalysis"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "464827454067-ms5tb5632pcg9l79uqnbgdo9u2g7e67l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBsfbpl6qzZ0drf5n8MhhJDKhGMaRsSu7c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "464827454067-ms5tb5632pcg9l79uqnbgdo9u2g7e67l.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,32 @@
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory app:title="@string/system_header"
+        app:iconSpaceReserved="false">
+        <Preference
+            app:key="clearHistory"
+            app:title="Clear history"
+            app:iconSpaceReserved="false"/>
+
+        <Preference
+            app:key="reset"
+            app:title="Reset system"
+            app:iconSpaceReserved="false"/>
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="@string/app_header"
+        app:iconSpaceReserved="false">
+        <SwitchPreference
+            app:key="darkTheme"
+            app:title="Dark theme"
+            app:iconSpaceReserved="false"
+            android:summaryOn="Dark theme is activated"
+            android:summaryOff="Dark theme is deactivated"/>
+
+        <SwitchPreference
+            android:key="notification"
+            app:iconSpaceReserved="false"
+            android:title="Notification" />
+    </PreferenceCategory>
+
+</PreferenceScreen>
